@@ -1,0 +1,9 @@
+{
+    "home": {
+        "path": "/",
+        "controller": "Index",
+        "action": "default",
+        "template": "formulaire.html"
+    }
+
+}
