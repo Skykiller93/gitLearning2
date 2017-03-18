@@ -3,6 +3,10 @@
         "path": "/",
         "controller": "Index",
         "action": "defaultAction"
+    },
+    "person": {
+        "path": "/enregistre",
+        "controller": "Index",
+        "action": "enregistrer"
     }
-
 }

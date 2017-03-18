@@ -8,20 +8,20 @@
 
 <body>
     <h2>Formulaire</h2><br/>
-    <form method="POST">
+    <form method="POST" action="enregistre">
         <fieldset>
             <legend>Simple Formulaire</legend>
             <div>
-                <label>Nom</label><br/><input type="text" name="nom" />
+                <label>Nom</label><br/><input type="text" name="nom" required/>
             </div>
             <div>
-                <label>Prenom</label><br/><input type="text" name="prenom" />
+                <label>Prenom</label><br/><input type="text" name="prenom" required/>
             </div>
             <div>
-                <label>Age</label><br/><input type="number" name="nom" />
+                <label>Age</label><br/><input type="number" name="age" required/>
             </div>
             <div>
-                <input type="submit" value="Soumetre votre formulaire" />
+                <input type="submit" value="Soumetre votre formulaire" required/>
             </div>
         </fieldset>
     </form>

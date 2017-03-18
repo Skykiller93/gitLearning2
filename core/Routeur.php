@@ -32,6 +32,7 @@ class Routeur {
 
         $controller = "Controller\\".$route["controller"];
         $controller = new $controller();
+        
         call_user_func_array(
             array(
                 $controller,

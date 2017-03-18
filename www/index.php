@@ -8,6 +8,6 @@ define ("VIEW",dirname(__DIR__).DIRECTORY_SEPARATOR."view");
 
 use Core\Routeur;
 
-Routeur::callController();
+Routeur::callController(); 
 
 ?>
