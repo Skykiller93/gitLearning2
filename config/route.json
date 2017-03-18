@@ -2,8 +2,7 @@
     "home": {
         "path": "/",
         "controller": "Index",
-        "action": "default",
-        "template": "formulaire.html"
+        "action": "defaultAction"
     }
 
 }

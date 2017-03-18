@@ -2,10 +2,14 @@
 
 namespace Controller;
 
-class Index {
+use Core\Controller;
+
+class Index extends Controller {
 
     public function defaultAction(){
-        echo "Je suis le controller";
+        
+        $this->render("formulaire.html");
+
     }
     
 }

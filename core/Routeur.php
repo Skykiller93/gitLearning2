@@ -19,7 +19,8 @@ class Routeur {
         $route["params"] = $_REQUEST;        
         foreach(self::$routes as $keyRoute => $itemRoute){
             if($itemRoute["path"] == $route["path"]){
-                return $route;
+                $itemRoute["params"] = $route["params"];
+                return $itemRoute;
             }
         }
         self::Erreur404();
@@ -27,7 +28,17 @@ class Routeur {
 
     static public function callController(){
         $route = self::getRoute();
-        
+        require CTRL.DIRECTORY_SEPARATOR.$route["controller"].".php";
+
+        $controller = "Controller\\".$route["controller"];
+        $controller = new $controller();
+        call_user_func_array(
+            array(
+                $controller,
+                $route["action"]
+            ),
+            $route["params"]
+        );
     }
 
     static private function Erreur404(){
